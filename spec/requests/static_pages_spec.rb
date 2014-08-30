@@ -40,4 +40,17 @@ describe "StaticPages" do
       expect(page).to have_title("Secondhand Stoke | About Us")
     end
   end
+
+  describe "Contact" do
+
+    it "shpuld have content 'Contact'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('Contact')
+    end
+
+    it "should have the title 'Contact'" do
+      visit '/static_pages/contact'
+      expect(page).to have_title("Secondhand Stoke | Contact")
+    end
+  end
 end
